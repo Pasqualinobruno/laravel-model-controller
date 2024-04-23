@@ -15,8 +15,8 @@
                 <a href="#">Film Website</a>
             </div>
             <ul class="nav-links">
-                <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('movies')}}">Movies</a></li>
+                <li><a class="{{Route::currentRouteName() === 'home' ? 'blue' : ''}}" href="{{route('home')}}">Home</a></li>
+                <li><a class="{{Route::currentRouteName() === 'movies' ? 'blue' : ''}}" href="{{route('movies')}}">Movies</a></li>
             </ul>
         </div>
     </nav>

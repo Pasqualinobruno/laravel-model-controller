@@ -1,5 +1,5 @@
 @extends('layaouts.app')
-
+@section('pageTitle', 'Movies')
 @section('content')
 
 <body>

@@ -1,6 +1,7 @@
 <?php
 
-use App\Models\Movie;
+use App\Http\Controllers\Guest\PageController;
+use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,12 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [PageController::class, 'home'])->name('home');
 
-Route::get('/movies', function () {
-    $movies = Movie::all();
-    //dd($movies);
-    return view('movies', compact('movies'));
-})->name('movies');
+Route::get('/movies', [PageController::class, 'movies'])->name('movies');
